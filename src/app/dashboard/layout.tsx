@@ -1,4 +1,4 @@
-import Header from '@/components/menu/header';
+import Navigation from '@/app/_components/menu/navigation';
 
 export default function RootLayout({
     children,
@@ -7,8 +7,9 @@ export default function RootLayout({
 }) {
     return (
         <main className="bg-base-200">
-            <Header />
+            <Navigation>
             {children}
+            </Navigation>
         </main>
     )
 }

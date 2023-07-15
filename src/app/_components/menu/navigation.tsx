@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Header = ({
+const Navigation = ({
     children,
 }: {
     children: React.ReactNode
@@ -69,4 +69,4 @@ const Header = ({
     </div>
 };
 
-export default Header;
+export default Navigation;

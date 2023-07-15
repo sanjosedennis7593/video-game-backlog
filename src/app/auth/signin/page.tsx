@@ -3,8 +3,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 
-import Button from '@/components/forms/button';
-import Input from '@/components/forms/input';
+import Button from '@/app/_components/forms/button';
+import Input from '@/app/_components/forms/input';
 
 export default function SignIn() {
   const router= useRouter()
