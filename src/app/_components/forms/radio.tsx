@@ -2,19 +2,31 @@
 import React from 'react';
 
 type Props = {
-    label: string
-    name: string
-    checked?: boolean
-    onChange: React.ChangeEvent<HTMLInputElement>
+  label: string
+  name: string
+  checked?: boolean
+  value: string | number | undefined
+  onChange: (value: string | number | undefined) => void;
 }
 
 const RadioButton = (props: Props) => {
-    const { onChange, checked = false, label = '', name = '' } = props;
+  const { onChange, value, checked = false, label = '', name = '' } = props;
 
-    return <div className="form-control">
+  const handleChange = () => {
+    onChange(value);
+  };
+
+  return <div className="form-control">
     <label className="label cursor-pointer justify-start">
-      <input onChange={onChange} type="radio" name={name} className="radio radio-primary" checked={checked} />
-      <span className="label-text px-1">{label}</span> 
+      <input
+        onChange={handleChange}
+        type="radio"
+        name={name}
+        className="radio radio-primary"
+        checked={checked}
+        value={value}
+      />
+      <span className="label-text px-1">{label}</span>
     </label>
   </div>
 };
