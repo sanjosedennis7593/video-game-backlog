@@ -1,6 +1,8 @@
+import { ReactNode } from 'react';
+
 type Props = {
-    title: string
-    description: string
+    title: string | ReactNode
+    description: string | ReactNode
     isBadgeVisible?: boolean
     badgeLabel?: string | undefined
     footerDesc?: string | undefined
