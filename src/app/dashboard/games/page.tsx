@@ -14,28 +14,28 @@ export default function Games() {
         </div>
         <div className="grid xs: grid-cols-1 gap-1 sm: grid-cols-1 gap-1 md:grid-cols-3 gap-4">
           <Card
-            title="Elden Ring"
+            title={<Link href="/dashboard/games/edit/1">Elden Ring</Link>}
             description="Playstation 5"
             isBadgeVisible={true}
             badgeLabel="Unfinished"
             footerDesc="July 16, 2023"
           />
           <Card
-            title="Legend of Zelda: Tears of the Kingdom"
+            title={<Link href="/dashboard/games/edit/1">Legend of Zelda: Tears of the Kingdom</Link>}
             description="Nintendo Switch"
             isBadgeVisible={true}
             badgeLabel="Beaten"
             footerDesc="July 16, 2023"
           />
           <Card
-            title="Hogwarts Legacy"
+            title={<Link href="/dashboard/games/edit/1">Hogwarts Legacy</Link>}
             description="Playstation 5"
             isBadgeVisible={true}
             badgeLabel="Completed"
             footerDesc="July 16, 2023"
           />
           <Card
-            title="Ghost of Tsushima"
+            title={<Link href="/dashboard/games/edit/1">Ghost of Tsushima</Link>}
             description="Playstation 5"
             isBadgeVisible={true}
             badgeLabel="Unfinished"

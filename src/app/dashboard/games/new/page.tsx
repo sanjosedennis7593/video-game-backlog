@@ -8,13 +8,7 @@ import RadioButton from '@/app/_components/forms/radio';
 import Ratings from '@/app/_components/forms/ratings';
 import Select from '@/app/_components/forms/select';
 
-const PLATFORM_OPTIONS = [
-  { label: 'Nintendo Switch', value: 'nintendo_switch' },
-  { label: 'PC', value: 'pc' },
-  { label: 'PS4', value: 'ps4' },
-  { label: 'PS5', value: 'ps5' },
-  { label: 'XBOX Series X', value: 'xboxseriesx' },
-];
+import { PLATFORM_OPTIONS } from '@/config/options';
 
 export default function NewGame() {
 
@@ -37,14 +31,12 @@ export default function NewGame() {
                 placeholder="Game Title"
                 type="text"
               />
-
               <Select
                 label="Platform"
                 name="platform"
                 placeholder="Please select a platform"
                 options={PLATFORM_OPTIONS}
               />
-
               <div>
                 <label className="label">
                   <span className="label-text">Status</span>
@@ -95,11 +87,7 @@ export default function NewGame() {
                 name="rating"
               />
 
-
             </div>
-
-
-
             <div className="form-control mt-4">
               <Button buttonStyle="primary">Add Game</Button>
             </div>
