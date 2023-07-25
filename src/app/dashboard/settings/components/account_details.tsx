@@ -11,7 +11,7 @@ export default function AccountDetails() {
 
     return (
         <div className="min-h-screen">
-            <div className=" flex ">
+            <div className="flex">
                 <div className="mx-auto px-4 my-10 flex-shrink-0 w-full shadow-2xl ">
                     <div className="">
                         <div >
