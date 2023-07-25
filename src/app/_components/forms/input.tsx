@@ -1,5 +1,5 @@
 'use client'
-
+import { ChangeEvent } from "react";
 type Props = {
     placeholder: string
     label: string
@@ -7,16 +7,18 @@ type Props = {
     rows?: number
     type: string
     value?: string | number | undefined
+    onChange?: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void 
 }
 
 const Input = (props: Props) => {
-    const { label, placeholder, rows, type, value, name = '' } = props;
+    const { label, placeholder, rows, type, value, onChange, name = '' } = props;
     return <div className="form-control">
         <label className="label">
             <span className="label-text">{label}</span>
         </label>
         {type === 'textarea' ?
             <textarea
+                onChange={onChange}
                 value={value}
                 name={name}
                 placeholder={placeholder}
@@ -24,6 +26,7 @@ const Input = (props: Props) => {
                 className="textarea textarea-bordered"
             /> :
             <input
+                onChange={onChange}
                 value={value}
                 name={name}
                 type={type}
