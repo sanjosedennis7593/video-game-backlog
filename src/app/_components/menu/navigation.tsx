@@ -1,12 +1,24 @@
+'use client';
 import React from 'react';
 import Link from 'next/link';
+// import { redirect } from 'next/navigation'
+import { useRouter } from 'next/navigation';
+
+
+import { logOut } from '@/services/auth';
 
 const Navigation = ({
     children,
 }: {
     children: React.ReactNode
 }) => {
+    const router = useRouter();
 
+    const handleSignOut = () => {
+        logOut();
+        router.replace('/');
+        router.refresh();
+    }
     return <div className="drawer">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
@@ -39,7 +51,7 @@ const Navigation = ({
                                             </Link>
                                         </li>
                                         <li><Link href="/dashboard/settings" >Settings</Link></li>
-                                        <li><Link href="/" >Logout</Link></li>
+                                        <li><span className="mt-2" onClick={handleSignOut} >Logout</span></li>
                                     </ul>
                                 </div>
                             </div>
@@ -61,7 +73,7 @@ const Navigation = ({
                     </Link>
                 </li>
                 <li><Link className="mt-2" href="/dashboard/settings" >Settings</Link></li>
-                <li><Link className="mt-2" href="/" >Logout</Link></li>
+                <li><span className="mt-2" onClick={handleSignOut} >Logout</span></li>
 
             </ul>
 
