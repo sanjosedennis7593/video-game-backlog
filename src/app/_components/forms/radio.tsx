@@ -6,7 +6,7 @@ type Props = {
   name: string
   checked?: boolean
   value: string | number | undefined
-  onChange: (value: string | number | undefined) => void;
+  onChange: (value: any) => void;
 }
 
 const RadioButton = (props: Props) => {
